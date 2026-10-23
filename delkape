@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Del Kape</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        matcha: {
+                            50: '#f4f7f2',
+                            100: '#e5ecdf',
+                            200: '#cedcc2',
+                            500: '#5c7a42',
+                            600: '#486333',
+                            700: '#384d28',
+                            900: '#202d17',
+                        },
+                        muscovado: {
+                            100: '#f9f3eb',
+                            500: '#8b5a2b',
+                            700: '#5a3818',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#FAF8F5] text-stone-800 font-sans antialiased selection:bg-matcha-200">
+
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-50 bg-[#FAF8F5]/90 backdrop-blur-md border-b border-matcha-100">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            
+
+            <a href="#" class="flex items-center gap-3">
+
+                <div class="w-10 h-10 rounded-full bg-matcha-600 flex items-center justify-center text-white font-serif font-bold text-xl shadow-md">
+
+                    D
+                </div>
+                <span class="font-serif text-2xl font-bold tracking-tight text-matcha-900">Del Kape</span>
+            </a>
+
+  
+            <div class="flex items-center gap-6">
+                <a href="#about" class="hidden md:inline-block text-sm font-semibold text-stone-600 hover:text-matcha-600 transition">Our Story</a>
+                <a href="#menu" class="hidden md:inline-block text-sm font-semibold text-stone-600 hover:text-matcha-600 transition">Menu & Pricing</a>
+                <a href="#order" class="px-5 py-2.5 rounded-full bg-matcha-600 text-white font-semibold text-sm hover:bg-matcha-700 transition shadow-sm hover:shadow">
+                    Order Now
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="max-w-6xl mx-auto px-6 pt-12 pb-24 md:pt-20 md:pb-32">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+ 
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-matcha-100 text-matcha-800 text-xs font-semibold tracking-wider uppercase">
+                    What's New?
+                </span>
+                
+                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-matcha-900 leading-[1.15]">
+                    Matcha Puto<span class="italic text-matcha-600"> Bumbong</span>
+                </h1>
+                
+                <p class="text-stone-600 text-lg md:text-xl max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                    Freshly steamed heirloom glutinous rice infused with rich Japanese matcha, crowned with freshly grated coconut, muscovado sugar, and melted butter.
+                </p>
+
+                <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+
+                    <a href="#order" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-matcha-600 text-white font-semibold text-base hover:bg-matcha-700 transition shadow-lg shadow-matcha-600/20 text-center">
+                        Order For Pickup / Delivery
+                    </a>
+                    <a href="#about" class="w-full sm:w-auto px-8 py-3.5 rounded-full border border-stone-300 text-stone-700 font-semibold text-base hover:border-matcha-600 hover:text-matcha-600 transition text-center">
+                        Explore Flavor
+                    </a>
+                </div>
+
+                <div class="pt-8 border-t border-matcha-100 grid grid-cols-3 gap-4 text-center lg:text-left">
+                    <div>
+                        <p class="font-bold text-matcha-900 text-base md:text-lg">100%</p>
+                        <p class="text-xs text-stone-500 font-medium">Uji Matcha Infused</p>
+                    </div>
+                    <div>
+                        <p class="font-bold text-matcha-900 text-base md:text-lg">Fresh</p>
+                        <p class="text-xs text-stone-500 font-medium">Steamed Per Batch</p>
+                    </div>
+                    <div>
+                        <p class="font-bold text-matcha-900 text-base md:text-lg">Artisan</p>
+                        <p class="text-xs text-stone-500 font-medium">Muscovado & Coconut</p>
+                    </div>
+                </div>
+            </div>
+
+ 
+            <div class="lg:col-span-5 relative">
+                <div class="relative mx-auto max-w-sm lg:max-w-none">
+
+                    <div class="absolute -inset-4 bg-matcha-200/50 rounded-3xl blur-2xl -z-10"></div>
+                    
+                    <div class="overflow-hidden rounded-3xl bg-stone-100 border border-stone-200/80 shadow-2xl">
+                    
+                        <img 
+                            src="https://uploads.onecompiler.io/452wk8cr8/1792738777792/Your%20paragraph%20text.png" 
+                            alt="Matcha Puto Bumbong" 
+                            class="w-full h-[450px] object-cover hover:scale-105 transition-transform duration-500 ease-out"
+                        />
+                    </div>
+
+   
+                    <div class="absolute -bottom-6 -left-6 bg-white py-3 px-5 rounded-2xl shadow-xl border border-stone-100 flex items-center gap-3">
+                 
+                        <div>
+                            <p class="text-xs text-stone-400 font-medium uppercase tracking-wider">Starting at</p>
+          
+                            <p class="text-base font-bold text-matcha-900">₱150.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
