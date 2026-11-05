@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Del Kape — Sips That Feel Like Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 1. NAVIGATION -->
+  <header>
+    <div class="nav-container">
+      <nav class="nav-links">
+        <a href="#home">home</a>
+        <a href="#story">story</a>
+      </nav>
+
+      <a href="#home" class="nav-logo">
+        <img src="BIA100_WIREFRAME__10__e0939fc2.png" alt="Del Kape Logo" />
+      </a>
+
+      <nav class="nav-links">
+        <a href="#reviews">reviews</a>
+        <a href="#promo">promo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 2. HERO SECTION -->
+    <section id="home" class="hero-section">
+      <div class="hero-wrapper">
+        <img src="BIA100_WIREFRAME_f2852e4c.png" alt="Left Tile Pattern" class="tile-border" />
+
+        <div class="hero-content">
+          <img src="BIA100_WIREFRAME__2__a7926d58.png" alt="Del Kape" class="hero-logo-img" />
+          <h2 class="hero-subtitle">Sips That Feel Like Home</h2>
+          <p class="hero-text">
+            Experience nostalgic Filipino delicacies fused with modern cafe craft. Brewed exclusively for the generation that loves both culture and coffee.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#beverages" class="btn-pill btn-menu">SEE OUR MENU</a>
+            <a href="#promo" class="btn-pill btn-promo">CLAIM NEW PROMO</a>
+          </div>
+        </div>
+
+        <img src="BIA100_WIREFRAME__1__1df87495.png" alt="Right Tile Pattern" class="tile-border" />
+      </div>
+    </section>
+
+    <!-- 3. BRAND STORY & INTERACTIVE GALLERY -->
+    <section id="story" class="story-section">
+      <div class="story-grid">
+        <!-- Interactive Gallery -->
+        <figure class="gallery-container">
+          <img id="gallery-img" src="DEL_KAPE_DESIGN__2__4687ddc2.png" alt="Del Kape Drinks" />
+          
+          <button type="button" class="gallery-btn gallery-btn-prev" onclick="prevImage()" aria-label="Previous Photo">&#10094;</button>
+          <button type="button" class="gallery-btn gallery-btn-next" onclick="nextImage()" aria-label="Next Photo">&#10095;</button>
+
+          <div class="gallery-caption-bar">
+            <span id="gallery-title">Our Signature Heritage Drinks</span>
+            <span>·</span>
+            <span id="gallery-counter">1 / 3</span>
+          </div>
+        </figure>
+
+        <!-- Brand Story Text -->
+        <article class="story-card">
+          <h2 class="story-title">Our Story</h2>
+          <p>
+            In the highly saturated coffee shop market with trendy atmospheres, the brand delivers nostalgia like a traditional Filipino home, full of warmth and culture, while incorporating modern elements.
+          </p>
+          <p>
+            Del Kape aims to let customers enjoy Philippine delicacies amid the rise of modern food trends. Serving well-known flavor options infused with a Filipino twist makes each exclusive drink stand out, enticing the adventurous cafe lovers who want to explore and find their new go-to drinks.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. BEVERAGES (3 PRICED PRODUCTS) -->
+    <section id="beverages" class="beverages-section">
+      <img src="BIA100_WIREFRAME__3__6a4a93cc.png" alt="Corner Filigree" class="corner-filigree-banner" />
+      <h2 class="beverages-title">BEVERAGES</h2>
+
+      <div class="cards-grid">
+        <article class="drink-card">
+          <img src="BIA100_WIREFRAME__7__6d674b4b.png" alt="Matcha Puto Bumbong - PHP 175" />
+        </article>
+
+        <article class="drink-card">
+          <img src="BIA100_WIREFRAME__8__a2205493.png" alt="Queso De Bola Tablea Mocha - PHP 160" />
+        </article>
+
+        <article class="drink-card">
+          <img src="BIA100_WIREFRAME__9__5eb9ef88.png" alt="Ube Pinipig Latte - PHP 175" />
+        </article>
+      </div>
+
+      <img src="BIA100_WIREFRAME__4__e6026abe.png" alt="Border Pattern" class="horizontal-pattern-border" />
+    </section>
+
+    <!-- 5. BUY 1 TAKE 1 PROMOTION & COUNTDOWN -->
+    <section id="promo" class="promo-section">
+      <img src="BIA100_WIREFRAME__4__e6026abe.png" alt="Border Pattern" class="horizontal-pattern-border" style="margin-bottom: 2rem;" />
+
+      <div class="promo-wrapper">
+        <div class="countdown-control-bar">
+          <button type="button" id="countdown-toggle-btn" class="btn-toggle-state" onclick="toggleCountdownState()">
+            Live Countdown (State: Active)
+          </button>
+        </div>
+
+        <article class="promo-card">
+          <h2 class="promo-title">BUY 1 TAKE 1 OFFER!</h2>
+          <h3 class="promo-subhead">Sign up now to avail our exclusive Buy 1 Take 1 offer before it ends!</h3>
+          <p class="promo-desc">
+            Buy 1 of the selected drinks (Matcha Puto Bumbong, Queso De Bola Tablea Mocha, Ube Pinipig Latte), and get 1 free drink of your choice!
+          </p>
+          <p class="promo-dates">Nov. 24 – Dec. 24 only</p>
+
+          <!-- Expired Notice -->
+          <div id="expired-box" class="expired-box">
+            <strong>OFFER EXPIRED:</strong> The Buy 1 Take 1 promo ended on December 24, 2026. Please check our menu for regular pricing.
+          </div>
+
+          <!-- Countdown Box -->
+          <div id="timer-box" class="countdown-box">
+            <div class="countdown-col">
+              <span class="countdown-label">DAYS</span>
+              <span id="timer-days" class="countdown-val">29</span>
+            </div>
+            <div class="countdown-col">
+              <span class="countdown-label">HOURS</span>
+              <span id="timer-hours" class="countdown-val">23</span>
+            </div>
+            <div class="countdown-col">
+              <span class="countdown-label">MINUTES</span>
+              <span id="timer-minutes" class="countdown-val">59</span>
+            </div>
+            <div class="countdown-col">
+              <span class="countdown-label">SECONDS</span>
+              <span id="timer-seconds" class="countdown-val">59</span>
+            </div>
+          </div>
+
+          <a href="#signup" class="btn-pill" style="background-color: var(--color-dark-brown); color: #FDF5E6; display: inline-block;">
+            SIGN UP FOR PROMO VOUCHER
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- 6. CUSTOMER REVIEWS (3 LABELED FICTIONAL TESTIMONIALS) -->
+    <section id="reviews" class="reviews-section">
+      <img src="BIA100_WIREFRAME__3__6a4a93cc.png" alt="Corner Filigree" class="corner-filigree-banner" />
+      <h2 class="reviews-title">CUSTOMER REVIEWS</h2>
+
+      <div class="cards-grid">
+        <article class="review-card">
+          <div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              "The Matcha Puto Bumbong is unlike anything I’ve tasted! The purple rice warmth paired with authentic matcha and savory grated cheese brought back childhood memories. 10/10 favorite!"
+            </p>
+          </div>
+          <div>
+            <h4 class="reviewer-name">Bianca Reyes</h4>
+            <p class="reviewer-role">Food Blogger & Café Regular</p>
+            <p class="reviewer-loc">Quezon City · Favorite: Matcha Puto Bumbong</p>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              "Del Kape’s Queso De Bola Tablea Mocha is masterclass level. Traditional Batangas cacao tablea balanced with savory Edam cheese foam. Truly Filipino heritage executed with precision."
+            </p>
+          </div>
+          <div>
+            <h4 class="reviewer-name">Chef Caloy Mendoza</h4>
+            <p class="reviewer-role">Culinary Arts Roaster</p>
+            <p class="reviewer-loc">Manila · Favorite: Queso De Bola Tablea Mocha</p>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              "Ube Pinipig Latte is my everyday go-to before court. The toasted pinipig gives such a delightful crunch to the rich purple yam layer. Authentic Philippine flavors done proudly."
+            </p>
+          </div>
+          <div>
+            <h4 class="reviewer-name">Atty. Miguel Cruz</h4>
+            <p class="reviewer-role">Heritage Advocate & Coffee Lover</p>
+            <p class="reviewer-loc">Makati · Favorite: Ube Pinipig Latte</p>
+          </div>
+        </article>
+      </div>
+
+      <img src="BIA100_WIREFRAME__6__9b605dd2.png" alt="Border Pattern" class="horizontal-pattern-border" />
+    </section>
+
+    <!-- 7. SIGN UP LEAD FORM -->
+    <section id="signup" class="signup-section">
+      <div class="signup-wrapper">
+        <img src="BIA100_WIREFRAME_f2852e4c.png" alt="Left Tile Pattern" class="tile-border" />
+
+        <div class="signup-content">
+          <h2 class="signup-title">SIGN UP</h2>
+
+          <div class="signup-card">
+            <!-- Dynamic Feedback Alert -->
+            <div id="form-feedback" class="feedback-box"></div>
+
+            <form id="signup-form" onsubmit="handleFormSubmit(event)">
+              <div class="form-group">
+                <label for="user-name" class="form-label">NAME:</label>
+                <input type="text" id="user-name" class="form-input" placeholder="Enter full name" />
+              </div>
+
+              <div class="form-group">
+                <label for="user-email" class="form-label">EMAIL:</label>
+                <input type="email" id="user-email" class="form-input" placeholder="name@email.com" />
+              </div>
+
+              <div class="consent-group">
+                <input type="checkbox" id="user-consent" style="margin-top: 3px;" />
+                <label for="user-consent">
+                  By checking the box, you have read and agree to our Privacy Policy
+                </label>
+              </div>
+
+              <button type="submit" class="btn-submit">SUBMIT</button>
+            </form>
+          </div>
+        </div>
+
+        <img src="BIA100_WIREFRAME__1__1df87495.png" alt="Right Tile Pattern" class="tile-border" />
+      </div>
+    </section>
+  </main>
+
+  <!-- 8. FOOTER CONTACTS -->
+  <footer>
+    <address class="footer-contacts" style="font-style: normal;">
+      <span>Facebook: Del Kape</span>
+      <span>Instagram: Del Kape</span>
+      <span>Phone: 0967 9841 305</span>
+      <span>Email: delkapeph@gmail.com</span>
+    </address>
+  </footer>
+
+  <!-- Connect Basic JavaScript ("Java") Script -->
+  <script src="script.js"></script>
+</body>
+</html>
